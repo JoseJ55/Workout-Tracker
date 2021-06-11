@@ -1,3 +1,6 @@
+// ------------------------------------------------------
+// day is not going into records correctly when seeding.
+// ------------------------------------------------------
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
@@ -6,7 +9,6 @@ const ExerciseSchema = new Schema({
     type: {
         type: String,
         trim: true,
-        required: "exercise type"
     },
     name: {
         type: String,
@@ -30,7 +32,7 @@ const WorkoutSchema = new Schema({
     day: {
         type: Date,
         trim: true,
-        required: "Must be a date and time"
+        // required: "Must be a date and time"
     }, 
     exercises: [
         ExerciseSchema

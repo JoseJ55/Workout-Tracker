@@ -1,11 +1,7 @@
 const router = require('express').Router();
 
-const home = require('./home');
-const exercise = require('./exercise');
-const stats = require('./stats');
+const api = require('./api')
 
-router.use('/', home);
-router.use('/exercise', exercise);
-router.use('/stats', stats)
+router.use('/api', api)
 
 module.exports = router;

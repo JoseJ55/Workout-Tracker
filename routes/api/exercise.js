@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const Workout = require('../models/Workout');
+const Workout = require('../../models/Workout');
 
 router.get('/', (req, res) => {
     try{
@@ -16,6 +16,16 @@ router.get('/', (req, res) => {
         });
         // console.log(workout)
         
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.post('/', (req, res) => {
+    try{
+        // Workout.create()
+        console.log(req.body)
+        res.status(200);
     } catch (err) {
         res.status(500).json(err);
     }
