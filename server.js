@@ -6,7 +6,6 @@ const exphbs = require('express-handlebars');
 
 const routes = require('./routes');
 const Workout = require('./models/Workout');
-const { db } = require('./models/Workout');
 
 const app = express();
 const PORT = process.env.PORT || 3001;

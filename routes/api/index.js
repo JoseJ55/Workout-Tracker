@@ -5,7 +5,7 @@ const exercise = require('./exercise');
 const stats = require('./stats');
 
 router.use('/', home);
-router.use('/exercise', exercise);
-router.use('/workouts', stats)
+router.use('/api/exercise', exercise);
+router.use('/api/workouts', stats)
 
 module.exports = router;
