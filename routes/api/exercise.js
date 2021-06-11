@@ -1,8 +1,7 @@
 const router = require('express').Router();
-
 const Workout = require('../../models/Workout');
 
-router.get('/', (req, res) => {
+router.get('/exercise', (req, res) => {
     try{
         // res.send("working");
         const workout = Workout.find({}, (err, result) => {
@@ -21,7 +20,7 @@ router.get('/', (req, res) => {
     }
 })
 
-router.post('/', (req, res) => {
+router.post('/exercise', (req, res) => {
     try{
         // Workout.create()
         console.log(req.body)
