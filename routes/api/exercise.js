@@ -1,3 +1,6 @@
+// ---------------------------------------------------
+// need to look into why heroku can't render the page.
+// ---------------------------------------------------
 const router = require('express').Router();
 const Workout = require('../../models/Workout');
 
