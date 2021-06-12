@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Workout = require('../../models/Workout');
 
-router.get('/exercise', (req, res) => {
+router.get('/', (req, res) => {
     try{
         // res.send("working");
         const workout = Workout.find({}, (err, result) => {
@@ -20,10 +20,11 @@ router.get('/exercise', (req, res) => {
     }
 })
 
-router.post('/exercise', (req, res) => {
+router.post('/', (req, res) => {
     try{
-        // Workout.create()
-        console.log(req.body)
+        // console.log(req.body)
+        // Workout.insertOne()
+        // console.log(req.body)
         res.status(200);
     } catch (err) {
         res.status(500).json(err);
